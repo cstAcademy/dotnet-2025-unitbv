@@ -18,8 +18,11 @@ public class BaseEntityConfig<T> : IEntityTypeConfiguration<T> where T : BaseEnt
 {
     private static void ConfigureBase(EntityTypeBuilder<T> builder)
     {
+        builder.Property(x => x.Id)
+            .UseIdentityColumn(seed: 1, increment: 1);
+        
         builder.HasKey(x => x.Id)
-            .IsClustered(false)
+            .IsClustered()
             .HasName("PK_" + typeof(T).Name + "Id");
 
         builder.Property(x => x.CreatedAt)
@@ -28,10 +31,12 @@ public class BaseEntityConfig<T> : IEntityTypeConfiguration<T> where T : BaseEnt
 
         builder.Property(x => x.ModifiedAt)
             .HasColumnType("datetime2")
+            .HasDefaultValue(null)
             .IsRequired(false);
 
         builder.Property(x => x.DeletedAt)
             .HasColumnType("datetime2")
+            .HasDefaultValue(null)
             .IsRequired(false);
 
         builder.HasIndex(x => x.DeletedAt)

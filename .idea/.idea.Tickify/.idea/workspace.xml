@@ -8,7 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0df083c1-032d-4e6a-8dba-3a590641aff1" name="Changes" comment="[Feature] Database Context, Log entities and logic example" />
+    <list default="true" id="0df083c1-032d-4e6a-8dba-3a590641aff1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tickify.Database/Migrations/20250402082530_BaseEntityUpdates.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tickify.Database/Migrations/20250402082530_BaseEntityUpdates.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tickify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tickify/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Database/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Entities/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Database/Entities/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Entities/Log.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Database/Migrations/TickifyDatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Migrations/TickifyDatabaseContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +27,11 @@
     <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lab-4-prepare" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -25,6 +39,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bb06f64c178142b0b2d10172f56d4911e8e928/7d/d9554045/AppContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cb0587797ea44bd6915ede69888c6766291038/d6/6a1f465d/IEntityTypeConfiguration`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595e4f2361fd31cb66c7e9303f46cf8f2fe77d96eea9d0e42c17cae783aa74/ServiceCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/LTP00080/Desktop/Work/.NET 2025 Tickify/dotnet-2025-unitbv/Tickify.Database/Entities/BaseEntity.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -44,13 +59,13 @@
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.Tickify.Api: Tickify.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab-4-prepare&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab-5-prepare&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;RiderNuGetOptionsPageId&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -96,6 +111,8 @@
       <updated>1742289313045</updated>
       <workItem from="1742289314196" duration="10021000" />
       <workItem from="1742305263187" duration="6697000" />
+      <workItem from="1743581144176" duration="862000" />
+      <workItem from="1743582057486" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="[Feature] Database Context, Log entities and logic example">
       <option name="closed" value="true" />

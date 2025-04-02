@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickify.Database", "Tickify
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickify.Infrastructure", "Tickify.Infrastructure\Tickify.Infrastructure.csproj", "{C68EA795-90ED-4980-91A2-7437D016A4DD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B1388B4-CD92-4775-8E03-489789E4FC6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{778DC7EA-FD6D-41E4-A153-0CE3A825CA1C} = {6B1388B4-CD92-4775-8E03-489789E4FC6D}
+		{E707F891-625F-4341-B24D-C01D323F5A4C} = {6B1388B4-CD92-4775-8E03-489789E4FC6D}
+		{CD38C02C-BE53-4D3B-B152-A469C96B9D10} = {6B1388B4-CD92-4775-8E03-489789E4FC6D}
+		{C68EA795-90ED-4980-91A2-7437D016A4DD} = {6B1388B4-CD92-4775-8E03-489789E4FC6D}
 	EndGlobalSection
 EndGlobal

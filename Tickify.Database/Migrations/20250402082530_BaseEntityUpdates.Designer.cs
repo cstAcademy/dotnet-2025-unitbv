@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tickify.Database.Context;
 
@@ -11,9 +12,11 @@ using Tickify.Database.Context;
 namespace Tickify.Database.Migrations
 {
     [DbContext(typeof(TickifyDatabaseContext))]
-    partial class TickifyDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250402082530_BaseEntityUpdates")]
+    partial class BaseEntityUpdates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

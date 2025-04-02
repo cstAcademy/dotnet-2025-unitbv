@@ -19,9 +19,11 @@ public class LogConfig : BaseEntityConfig<Log>
         builder.ToTable("Logs");
 
         builder.Property(x => x.Message)
+            .HasDefaultValue(null)
             .HasMaxLength(1_000);
         
         builder.Property(x => x.StackTrace)
+            .HasDefaultValue(null)
             .HasMaxLength(10_000);
 
         builder.HasIndex(x => x.LogLevel)
