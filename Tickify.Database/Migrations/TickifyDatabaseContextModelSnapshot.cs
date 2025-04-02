@@ -50,19 +50,9 @@ namespace Tickify.Database.Migrations
                         .HasMaxLength(10000)
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id")
-                        .HasName("PK_LogId");
+                    b.HasKey("Id");
 
-                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
-
-                    b.HasIndex("DeletedAt")
-                        .HasDatabaseName("IX_DeletedAt")
-                        .HasFilter("[DeletedAt] IS NULL");
-
-                    b.HasIndex("LogLevel")
-                        .HasDatabaseName("IX_Logs_LogLevel");
-
-                    b.ToTable("Logs", (string)null);
+                    b.ToTable("Logs");
                 });
 #pragma warning restore 612, 618
         }

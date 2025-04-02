@@ -18,10 +18,5 @@ public class TickifyDatabaseContext : DbContext
         }
     }
     
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BaseEntityConfig<>).Assembly);
-    }
-    
     public DbSet<Log> Logs { get; set; }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Tickify.Database.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class BaseEntityUpdates : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,20 +26,8 @@ namespace Tickify.Database.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LogId", x => x.Id)
-                        .Annotation("SqlServer:Clustered", false);
+                    table.PrimaryKey("PK_Logs", x => x.Id);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_DeletedAt",
-                table: "Logs",
-                column: "DeletedAt",
-                filter: "[DeletedAt] IS NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Logs_LogLevel",
-                table: "Logs",
-                column: "LogLevel");
         }
 
         /// <inheritdoc />
