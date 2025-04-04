@@ -5,10 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tickify.Infrastructure\Tickify.Infrastructure.csproj" />
   </ItemGroup>

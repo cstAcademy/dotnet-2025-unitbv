@@ -5,7 +5,7 @@ using Tickify.Database.Repositories;
 
 namespace Tickify.Core.Services;
 
-public class LogsService(LogsRepository logsRepository)
+public class LogsService(LogsRepository logsRepository, EventsRepository eventsRepository)
 {
     public Task AddLogAsync(AddLogRequest request)
     {

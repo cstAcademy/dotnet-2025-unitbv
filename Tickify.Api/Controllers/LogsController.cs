@@ -9,7 +9,6 @@ namespace Tickify.Api.Controllers;
 
 public class LogsController(LogsService logsService) : ControllerBase
 {
-    
     [HttpPost("add-log")]
     public async Task<IActionResult> AddLog([FromBody] AddLogRequest request)
     {

@@ -19,4 +19,12 @@ public class TickifyDatabaseContext : DbContext
     }
     
     public DbSet<Log> Logs { get; set; }
+    
+    public DbSet<Ticket> Tickets { get; set; }
+    
+    public DbSet<Event> Events { get; set; }
+    
+    public DbSet<TicketPrice> TicketPriceHistory { get; set; }
+    
+    
 }

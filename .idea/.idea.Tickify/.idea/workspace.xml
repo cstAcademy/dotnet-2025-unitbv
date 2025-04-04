@@ -8,17 +8,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0df083c1-032d-4e6a-8dba-3a590641aff1" name="Changes" comment="[Fix] Improvements on entity model builder">
+    <list default="true" id="0df083c1-032d-4e6a-8dba-3a590641aff1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Tickify.Database/Entities/Event.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tickify.Database/Entities/Ticket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tickify.Database/Entities/TicketPrice.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tickify.Database/Enums/TicketTypes.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tickify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tickify/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Api/Controllers/LogsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Api/Controllers/LogsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Core/DIConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Core/DIConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Core/Services/LogsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Core/Services/LogsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tickify.Database/Context/TickifyDatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Context/TickifyDatabaseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Database/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Entities/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Database/Entities/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Entities/Log.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Database/Migrations/20250318141724_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Database/Migrations/20250318141724_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Database/Migrations/20250402082530_BaseEntityUpdates.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Database/Migrations/20250402082530_BaseEntityUpdates.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tickify.Database/Migrations/TickifyDatabaseContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Database/Migrations/TickifyDatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Migrations/TickifyDatabaseContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Database/Repositories/LogsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Repositories/LogsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tickify.Database/Tickify.Database.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tickify.Database/Tickify.Database.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +40,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/329c04ad0e624e77b922b22f90773b7b25928/db/b41feaf5/LogLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5de0066537eb408e871ec6bffa1ea70f20ae48/e9/77981f38/Migration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bb06f64c178142b0b2d10172f56d4911e8e928/7d/d9554045/AppContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cb0587797ea44bd6915ede69888c6766291038/d6/6a1f465d/IEntityTypeConfiguration`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595e4f2361fd31cb66c7e9303f46cf8f2fe77d96eea9d0e42c17cae783aa74/ServiceCollection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/LTP00080/Desktop/Work/.NET 2025 Tickify/dotnet-2025-unitbv/Tickify.Api/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/LTP00080/Desktop/Work/.NET 2025 Tickify/dotnet-2025-unitbv/Tickify.Database/Entities/BaseEntity.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -62,7 +63,7 @@
   "keyToString": {
     ".NET Launch Settings Profile.Tickify.Api: Tickify.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lab-6-simplified-model-builder",
+    "git-widget-placeholder": "lab-6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
