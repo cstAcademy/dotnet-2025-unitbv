@@ -8,6 +8,7 @@ public class Ticket : BaseEntity
     public int EventId { get; set; }
     
     public required Event Event { get; set; }
+    public User User { get; set; }
 
     public List<TicketPrice> TicketPrices { get; set; } = [];
 }
