@@ -23,4 +23,5 @@ public class TickifyDatabaseContext : DbContext
     public DbSet<Event> Events { get; set; }
     public DbSet<TicketPrice> TicketPriceHistory { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<UserTicket> UserTickets { get; set; }
 }

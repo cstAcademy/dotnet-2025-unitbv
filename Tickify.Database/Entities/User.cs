@@ -8,6 +8,6 @@
         public string PhoneNumber { get; set; }
         public int Age { get; set; }
 
-        public List<Ticket> Tickets { get; set; } = new List<Ticket>();
+        public List<UserTicket> UserTickets { get; set; } = new List<UserTicket>();
     }
 }
