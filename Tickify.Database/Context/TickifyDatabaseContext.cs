@@ -10,7 +10,7 @@ public class TickifyDatabaseContext : DbContext
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(AppConfig.ConnectionStrings?.TickifyDatabase);
+        optionsBuilder.UseSqlServer(AppConfig.ConnectionStrings?.TickifyDatabase).LogTo(Console.WriteLine);
 
         if (AppConfig.ConsoleLogQueries)
         {

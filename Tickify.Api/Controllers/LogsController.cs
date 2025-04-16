@@ -5,7 +5,7 @@ using Tickify.Core.Services;
 namespace Tickify.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("logs")]
 
 public class LogsController(LogsService logsService) : ControllerBase
 {
