@@ -7,8 +7,21 @@ using Tickify.Database.Repositories;
 
 namespace Tickify.Core.Services
 {
-    public class EventsService(EventsRepository eventsRepository)
+    public class EventsService
     {
+        private readonly EventsRepository eventsRepository;
+        private readonly TicketsRepository ticketsRepository;
+        private readonly SingletonService singletonService;
+
+        public EventsService(EventsRepository eventsRepository, TicketsRepository ticketsRepository, SingletonService singletonService)
+        {
+            this.eventsRepository = eventsRepository;
+            this.ticketsRepository = ticketsRepository;
+            this.singletonService = singletonService;
+
+            Console.WriteLine("EventsService initialized");
+        }
+
         public async Task AddEventAsync(AddEventRequest payload)
         {
             var newEvent = payload.ToEntity();

@@ -4,8 +4,14 @@ using Tickify.Database.Entities;
 
 namespace Tickify.Database.Repositories;
 
-public class EventsRepository(TickifyDatabaseContext tickifyDatabaseContext) : BaseRepository<Event>(tickifyDatabaseContext)
+public class EventsRepository : BaseRepository<Event>
 {
+    public EventsRepository(TickifyDatabaseContext tickifyDatabaseContext) : base(tickifyDatabaseContext)
+    {
+        this.tickifyDatabaseContext = tickifyDatabaseContext;
+        Console.WriteLine("EventsRepository initialized");
+    }
+
     public async Task AddAsync(Event entity)
     {
         tickifyDatabaseContext.Events.Add(entity);

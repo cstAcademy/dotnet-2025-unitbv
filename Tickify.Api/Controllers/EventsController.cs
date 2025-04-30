@@ -7,7 +7,7 @@ namespace Tickify.Api.Controllers
     [ApiController]
     [Route("events")]
 
-    public class EventsController(EventsService eventsService) : ControllerBase
+    public class EventsController(EventsService eventsService, TicketsService ticketsService) : ControllerBase
     {
         [HttpPost("add-event")]
         public async Task<IActionResult> AddEvent([FromBody] AddEventRequest payload)

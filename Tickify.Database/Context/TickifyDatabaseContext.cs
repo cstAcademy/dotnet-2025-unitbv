@@ -7,17 +7,13 @@ namespace Tickify.Database.Context;
 public class TickifyDatabaseContext : DbContext
 {
     public TickifyDatabaseContext() { }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(AppConfig.ConnectionStrings?.TickifyDatabase).LogTo(Console.WriteLine);
+        optionsBuilder.UseSqlServer(AppConfig.ConnectionStrings?.TickifyDatabase);//.LogTo(Console.WriteLine);
 
-        if (AppConfig.ConsoleLogQueries)
-        {
-            optionsBuilder.LogTo(Console.WriteLine);
-        }
     }
-    
+
     public DbSet<Log> Logs { get; set; }
     public DbSet<Ticket> Tickets { get; set; }
     public DbSet<Event> Events { get; set; }

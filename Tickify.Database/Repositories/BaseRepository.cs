@@ -4,10 +4,17 @@ using Tickify.Database.Entities;
 
 namespace Tickify.Database.Repositories;
 
-public class BaseRepository<T>(TickifyDatabaseContext databaseContext) where T : BaseEntity
+public class BaseRepository<T> where T : BaseEntity
 {
-    private DbSet<T> DbSet { get; } = databaseContext.Set<T>();
-    
+    protected TickifyDatabaseContext tickifyDatabaseContext { get; set; }
+    public BaseRepository(TickifyDatabaseContext databaseContext)
+    {
+        this.tickifyDatabaseContext = databaseContext;
+        DbSet = databaseContext.Set<T>();
+    }
+
+    private DbSet<T> DbSet { get; }
+
     public Task<List<T>> GetAllAsync(bool includeDeletedEntities = false)
     {
         return GetRecords(includeDeletedEntities).ToListAsync();
@@ -47,7 +54,7 @@ public class BaseRepository<T>(TickifyDatabaseContext databaseContext) where T :
 
     public Task SaveChangesAsync()
     {
-        return databaseContext.SaveChangesAsync();
+        return tickifyDatabaseContext.SaveChangesAsync();
     }
 
     protected IQueryable<T> GetRecords(bool includeDeletedEntities = false)
