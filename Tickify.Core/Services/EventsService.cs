@@ -21,16 +21,8 @@ namespace Tickify.Core.Services
         {
             var events = await eventsRepository.GetAllAsync();
 
-            var result = new GetEventsResponse
-            {
-                Events = events.Select(e => new EventDto
-                {
-                    Id = e.Id,
-                    EventName = e.Name,
-                    StartDate = e.StartDate,
-                    EndDate = e.EndDate,
-                }).ToList()
-            };
+            var result = new GetEventsResponse();
+            result.Events = events.ToEventDtos();
 
             return result;
         }

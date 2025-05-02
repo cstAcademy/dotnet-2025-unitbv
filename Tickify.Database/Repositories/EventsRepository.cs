@@ -15,6 +15,11 @@ public class EventsRepository(TickifyDatabaseContext tickifyDatabaseContext) : B
     public async Task<List<Event>> GetAllAsync()
     {
         var results = await tickifyDatabaseContext.Events
+            .Include(e => e.Tickets)
+                .ThenInclude(e => e.TicketPrices)
+             .Include(e => e.Tickets)
+                .ThenInclude(e => e.UserTickets)
+
             .Where(e => e.DeletedAt == null)
 
             .OrderBy(e => e.Name)

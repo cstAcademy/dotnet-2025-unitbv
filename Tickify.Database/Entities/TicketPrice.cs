@@ -6,7 +6,7 @@ public class TicketPrice : BaseEntity
 {
     public int TicketId { get; set; }
     
-    public required Ticket Ticket { get; set; }
+    public Ticket Ticket { get; set; }
     
     public decimal Price { get; set; }
     

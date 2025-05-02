@@ -13,6 +13,7 @@ public static class DIConfig
         services.AddScoped<DbContext, TickifyDatabaseContext>();
         services.AddScoped<LogsRepository>();
         services.AddScoped<EventsRepository>();
+        services.AddScoped<TicketsRepository>();
         
         return services;
     }

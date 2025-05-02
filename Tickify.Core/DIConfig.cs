@@ -9,6 +9,7 @@ public static class DIConfig
     {
         services.AddScoped<LogsService>();
         services.AddScoped<EventsService>();
+        services.AddScoped<TicketsService>();
         
         return services;
     }
