@@ -1,6 +1,7 @@
 using Tickify.Core;
 using Tickify.Database;
 using Tickify.Infrastructure.Config;
+using Tickify.Infrastructure.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,9 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/openapi/v1.json", "OpenAPI V1");
     });
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseMiddleware<LoggingMiddleware>();
 
 app.UseHttpsRedirection();
 
