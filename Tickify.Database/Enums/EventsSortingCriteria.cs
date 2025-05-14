@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tickify.Core.Dtos.Requests.Events
+namespace Tickify.Database.Enums
 {
-    public class GetEventsRequest
+    public enum EventsSortingCriteria
     {
+        EventName = 1,
+        EventStartDate
     }
 }

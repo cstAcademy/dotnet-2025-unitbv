@@ -17,7 +17,7 @@ namespace Tickify.Api.Controllers
         }
 
         [HttpPost("get-filtered-events")]
-        public async Task<IActionResult> GetFilteredEvents(GetEventsRequest payload)
+        public async Task<IActionResult> GetFilteredEvents(GetFilteredEventsRequest payload)
         {
             var result = await eventsService.GetEventsAsync(payload);
             return Ok(result);

@@ -19,9 +19,9 @@ namespace Tickify.Core.Services
             await eventsRepository.AddAsync(newEvent);
         }
 
-        public async Task<GetEventsResponse> GetEventsAsync(GetEventsRequest payload)
+        public async Task<GetEventsResponse> GetEventsAsync(GetFilteredEventsRequest payload)
         {
-            var events = await eventsRepository.GetAllAsync();
+            var events = await eventsRepository.GetFilteredAsync(payload.Filters, payload.SortingOption);
 
             var result = new GetEventsResponse();
             result.Events = events.ToEventDtos();
