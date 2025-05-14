@@ -16,10 +16,10 @@ namespace Tickify.Api.Controllers
             return Ok("Event added successfully");
         }
 
-        [HttpPost("get-events")]
-        public async Task<IActionResult> GetEvents(GetEventsRequest payload)
+        [HttpGet("get-events")]
+        public async Task<IActionResult> GetEvents()
         {
-            var result = await eventsService.GetEventsAsync(payload);
+            var result = await eventsService.GetEventsAsync();
             return Ok(result);
         }
     }
