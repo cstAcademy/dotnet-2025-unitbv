@@ -10,6 +10,8 @@ public static class DIConfig
         services.AddScoped<LogsService>();
         services.AddScoped<EventsService>();
         services.AddScoped<TicketsService>();
+        services.AddScoped<UsersService>();
+        services.AddScoped<AuthService>();
         
         return services;
     }

@@ -2,13 +2,12 @@
 using Tickify.Core.Dtos.Requests.Events;
 using Tickify.Core.Dtos.Requests.Tickets;
 using Tickify.Core.Services;
+using Tickify.Infrastructure.Base;
 
 namespace Tickify.Api.Controllers
 {
-    [ApiController]
     [Route("tickets")]
-
-    public class TicketsController(TicketsService ticketsService) : ControllerBase
+    public class TicketsController(TicketsService ticketsService) : BaseController
     {
         [HttpPost("add-ticket")]
         public async Task<IActionResult> AddTicket([FromBody] AddTicketRequest payload)
@@ -16,6 +15,5 @@ namespace Tickify.Api.Controllers
             await ticketsService.AddTicketAsync(payload);
             return Ok("Ticket added successfully");
         }
-
     }
 }

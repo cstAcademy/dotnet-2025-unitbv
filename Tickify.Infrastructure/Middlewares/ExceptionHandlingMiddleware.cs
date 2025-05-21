@@ -37,6 +37,10 @@ namespace Tickify.Infrastructure.Middlewares
             {
                 await RespondToExceptionAsync(context, HttpStatusCode.BadRequest, ex.Message, ex);
             }
+            catch (UnauthorizedAccessException ex)
+            {
+                await RespondToExceptionAsync(context, HttpStatusCode.BadRequest, ex.Message, ex);
+            }
             catch (Exception ex)
             {
                 await RespondToExceptionAsync(context, HttpStatusCode.InternalServerError, "Internal Server Error", ex);

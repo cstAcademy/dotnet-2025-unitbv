@@ -6,7 +6,8 @@ namespace Tickify.Infrastructure.Config
     public class AppConfig
     {
         public static bool ConsoleLogQueries = true;
-        public static ConnectionStringsSettings? ConnectionStrings { get; set; }
+        public static ConnectionStringsSettings ConnectionStrings { get; set; }
+        public static JWTSettings JWTSettings { get; set; }
 
         public static void Init(IConfiguration configuration)
         {
@@ -16,6 +17,7 @@ namespace Tickify.Infrastructure.Config
         private static void Configure(IConfiguration configuration)
         {
             ConnectionStrings = configuration.GetSection("ConnectionStrings").Get<ConnectionStringsSettings>();
+            JWTSettings = configuration.GetSection("JWT").Get<JWTSettings>();
         }
     }
 }

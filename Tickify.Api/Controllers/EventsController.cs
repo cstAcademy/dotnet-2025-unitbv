@@ -1,14 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Tickify.Core.Dtos.Requests.Events;
 using Tickify.Core.Services;
+using Tickify.Infrastructure.Base;
 
 namespace Tickify.Api.Controllers
 {
-    [ApiController]
     [Route("events")]
-
-    public class EventsController(EventsService eventsService) : ControllerBase
+    [Authorize]
+    public class EventsController(EventsService eventsService) : BaseController
     {
+        [Authorize(Roles = "Admin")]
         [HttpPost("add-event")]
         public async Task<IActionResult> AddEvent([FromBody] AddEventRequest payload)
         {

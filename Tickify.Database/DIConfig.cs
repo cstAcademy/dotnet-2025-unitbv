@@ -14,6 +14,7 @@ public static class DIConfig
         services.AddScoped<LogsRepository>();
         services.AddScoped<EventsRepository>();
         services.AddScoped<TicketsRepository>();
+        services.AddScoped<UsersRepository>();
         
         return services;
     }

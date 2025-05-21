@@ -1,13 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Tickify.Core.Dtos.Requests.Logs;
 using Tickify.Core.Services;
+using Tickify.Infrastructure.Base;
 
 namespace Tickify.Api.Controllers;
 
-[ApiController]
 [Route("logs")]
-
-public class LogsController(LogsService logsService) : ControllerBase
+public class LogsController(LogsService logsService) : BaseController
 {
     [HttpPost("add-log")]
     public async Task<IActionResult> AddLog([FromBody] AddLogRequest request)
